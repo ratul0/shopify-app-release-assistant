@@ -33,9 +33,9 @@ Guides you through all **14 required deliverables** for a Shopify App Store subm
 
 ## How It Works
 
-1. Describe your app in 2-3 sentences
-2. The skill works through each deliverable in order
-3. For each one, it asks 2-4 focused questions, then generates output
+1. Run the skill from your app's root directory — it automatically reads your code, configs, and project structure to understand what your app does
+2. The skill asks a few targeted questions to fill gaps it can't infer from code (pricing, target audience, brand voice)
+3. It works through each deliverable in order, generating output based on what it learned
 4. You approve or request revisions before moving on
 5. At the end, get a compiled reference document with everything
 
@@ -60,24 +60,28 @@ Guides you through all **14 required deliverables** for a Shopify App Store subm
 ## Example
 
 ```
-You: I need help submitting my Shopify app. It's a virtual try-on tool
-     for clothing stores — shoppers upload a photo and AI shows them
-     wearing the product. Aimed at fashion merchants who want to
-     reduce returns.
+You: I need help submitting my Shopify app to the App Store.
+
+Skill: I've analyzed your project. Here's what I found:
+       - React-based app using Polaris components
+       - Adds a product reviews widget to storefronts
+       - Uses App Proxy for storefront endpoints
+       - Handles customer data (review author names, emails)
+
+       A few questions before we start:
+       1. What's your brand name for this app?
+       2. Who's your target merchant — niche or all stores?
+       3. Do you have a pricing model in mind?
+
+You: Brand is "Starfish", targeting small-to-mid stores, freemium.
 
 Skill: Let's start with your App Name (max 30 characters).
-       A few questions first:
-       1. Is "VTon" your established brand name?
-       2. In 2-3 words, what's the primary function?
-       3. Any competitor app names to differentiate from?
 
-       Here are 3 options:
-
-       | # | Name                        | Chars |
-       |---|-----------------------------|-------|
-       | 1 | VTon - AI Virtual Try-On    | 25    |
-       | 2 | VTon - Virtual Try-On       | 22    |
-       | 3 | VTon AI Try-On              | 16    |
+       | # | Name                           | Chars |
+       |---|--------------------------------|-------|
+       | 1 | Starfish ‑ Product Reviews     | 28    |
+       | 2 | Starfish Reviews               | 18    |
+       | 3 | Starfish ‑ Reviews & Ratings   | 30    |
 
        Rule: Names must start with your brand name, not a generic
        descriptor. All three comply. Which works, or want revisions?
